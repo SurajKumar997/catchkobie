@@ -1,0 +1,29 @@
+﻿{
+	"version": 1604746089,
+	"fileList": [
+		"data.js",
+		"c2runtime.js",
+		"jquery-3.4.1.min.js",
+		"offlineClient.js",
+		"images/backdround-sheet0.png",
+		"images/box-sheet0.png",
+		"images/dragon-sheet0.png",
+		"images/dragon-sheet1.png",
+		"images/score-sheet0.png",
+		"images/sprite-sheet0.png",
+		"images/net-sheet0.png",
+		"images/menu-sheet0.png",
+		"images/button-sheet0.png",
+		"images/sprite2-sheet0.png",
+		"images/sprite2-sheet1.png",
+		"media/bounce2.ogg",
+		"media/click.ogg",
+		"media/music.ogg",
+		"icon-16.png",
+		"icon-32.png",
+		"icon-114.png",
+		"icon-128.png",
+		"icon-256.png",
+		"loading-logo.png"
+	]
+}
