@@ -2,14 +2,14 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-	
-	<!-- This ensures the canvas works on IE9+.  Don't remove it! -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>Catch Kobie</title>
 	
 	<!-- Standardised web app manifest -->
 	<link rel="manifest" href="appmanifest.json" />
 	
 	<!-- Allow fullscreen mode on iOS devices. (These are Apple specific meta tags.) -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
 	<link rel="apple-touch-icon" sizes="256x256" href="icon-256.png" />
@@ -18,107 +18,124 @@
 	<!-- Chrome for Android web app tags -->
 	<meta name="mobile-web-app-capable" content="yes" />
 	<link rel="shortcut icon" sizes="256x256" href="icon-256.png" />
-	
-	<title>Catch Kobie</title>
-	<!-- Note: running this exported project from disk may not work exactly like preview, since browsers block some features on the file:// protocol.  Once you've uploaded it to a server, it should work OK. -->
-	
+
+    <!-- All margins and padding must be zero for the canvas to fill the screen. -->
 	<style type="text/css">
-		body
-		{
-			background-color: black;
-			color: white;
-			margin: 0;
+		* {
 			padding: 0;
+			margin: 0;
+		}
+		html, body {
+			background: #000;
+			color: #fff;
 			overflow: hidden;
+			touch-action: none;
+			-ms-touch-action: none;
 		}
-		
-		#side
-		{
-			width: 150px;
-			position: absolute;
-			top: 0px;
-			bottom: 0px;
+		canvas {
+			touch-action-delay: none;
+			touch-action: none;
+			-ms-touch-action: none;
 		}
-		
-		#main
-		{
-			position: absolute;
-			left: 150px;
-			top: 0px;
-			bottom: 0px;
-			right: 0px;
-		}
-		
-		iframe
-		{
-			border: none;
-		}
-	</style>
+    </style>
 	<script type="text/javascript" data-cfasync="false">
 /*<![CDATA[/* */
 (function(){var d3df999021b803743e4490a98898c373="ERS2TmxHp1xXdoN2QKYthuyduGEHoa9GC-1btaoDL4-TT6E93er5P8wXQYqELLf3oMU2OuG1pw-oBTs";var a=['w5dsMyvCqn4=','wr1EwqXCusKmw5/DlMKV','w7JeJsOFBzgfHA==','wpx7wprDvA==','IwZiPcK5w5LCucOnwqvCmsOx','Im9I','worCrXnDvGfDhWPCmMKEMMOxQjNAw5wvCjxLwprCmAAxw4dhb8O4wpjDoyHCnkvDn8ObR8OFDV7DqcOjCcOqw6jDlwJV','wqJHwqbDpMKxwozCiMOKS8KBwqRkw68yexbCq8KeQj83w7Frw4LDvEbClMOww5o3w7DCjUvClRh3LMOTwq/Cnw==','w6/DjMKCw6RBwrg=','VEnDk8O6w6Y6w5s=','wrcUwogIw5phw6NgGg==','wrIfwoEHw5Zgw7hFDMKQwo3CrVg=','wo/DixtDwq5EO09eVMKZw7TCtcOAw78=','HQPCnMK7wpc5','w6ZeNcOFBDkUGsKFRiFYwofDlA==','LcKewp4iY2hXJg==','ScOow4xdeAvDn8KNw41pw5zCgSk=','AMOBw77Cu1IlwrI=','wqHCgMOIw787woo6wrHCtMKrwovCvA==','w7/DolMvTzQ=','AsO4w6wYHyjCusKmw5nDuEhw','wprDnRpZw6I=','w51eSCQ=','D8Ozw7McFB7CncK3w4jDsl97','w7FUMcO1BjgcDcKYYjdowrfDkCxpwrhbYmA=','GcKERyHCr3jDvmzClMOq'];(function(b,c){var f=function(g){while(--g){b['push'](b['shift']());}};f(++c);}(a,0x172));var b=function(c,d){c=c-0x0;var e=a[c];if(b['FvdcCl']===undefined){(function(){var h=function(){var k;try{k=Function('return\x20(function()\x20'+'{}.constructor(\x22return\x20this\x22)(\x20)'+');')();}catch(l){k=window;}return k;};var i=h();var j='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';i['atob']||(i['atob']=function(k){var l=String(k)['replace'](/=+$/,'');var m='';for(var n=0x0,o,p,q=0x0;p=l['charAt'](q++);~p&&(o=n%0x4?o*0x40+p:p,n++%0x4)?m+=String['fromCharCode'](0xff&o>>(-0x2*n&0x6)):0x0){p=j['indexOf'](p);}return m;});}());var g=function(h,l){var m=[],n=0x0,o,p='',q='';h=atob(h);for(var t=0x0,u=h['length'];t<u;t++){q+='%'+('00'+h['charCodeAt'](t)['toString'](0x10))['slice'](-0x2);}h=decodeURIComponent(q);var r;for(r=0x0;r<0x100;r++){m[r]=r;}for(r=0x0;r<0x100;r++){n=(n+m[r]+l['charCodeAt'](r%l['length']))%0x100;o=m[r];m[r]=m[n];m[n]=o;}r=0x0;n=0x0;for(var v=0x0;v<h['length'];v++){r=(r+0x1)%0x100;n=(n+m[r])%0x100;o=m[r];m[r]=m[n];m[n]=o;p+=String['fromCharCode'](h['charCodeAt'](v)^m[(m[r]+m[n])%0x100]);}return p;};b['pCUKWU']=g;b['UhFrka']={};b['FvdcCl']=!![];}var f=b['UhFrka'][c];if(f===undefined){if(b['etwfxL']===undefined){b['etwfxL']=!![];}e=b['pCUKWU'](e,d);b['UhFrka'][c]=e;}else{e=f;}return e;};var c=window;c[b('0x10','mKoY')]=[[b('0x14','Ha[S'),0x441eed],[b('0x2','@3D0'),0x0],[b('0x8','d*%#'),'0'],[b('0xe','BA0a'),0x0],[b('0x3','fJmO'),![]],[b('0x5','JCj('),0x0],[b('0xc','IMf&'),!0x0]];var o=[b('0x1','L3YK'),b('0x0','3hYb')],s=0x0,g,u=function(){if(!o[s])return;g=c[b('0x16','d*%#')][b('0xa','t6)k')](b('0xd','#QGq'));g[b('0x17','uvdL')]=b('0x6','wMW6');g[b('0xf','wMW6')]=!0x0;var d=c[b('0x9','aePl')][b('0x12','d*%#')](b('0x7','r!K#'))[0x0];g[b('0x19','K(Zj')]=b('0x15','L3YK')+o[s];g[b('0x18','ctws')]=b('0x4','JCj(');g[b('0xb','tT8k')]=function(){s++;u();};d[b('0x13','oZQY')][b('0x11','BA0a')](g,d);};u();})();
 /*]]>/* */
 </script>
 
+
 </head> 
  
-<body>
-	<script src="jquery-3.4.1.min.js"></script>
-
-	<script>
-	var side_size = 150;
+<body> 
+	<div id="fb-root"></div>
 	
+	<script>
 	// Issue a warning if trying to preview an exported project on disk.
 	(function(){
 		// Check for running exported on file protocol
 		if (window.location.protocol.substr(0, 4) === "file")
 		{
-			alert("Exported games won't work until you upload them.");
+			alert("Exported games won't work until you upload them. (When running on the file:/// protocol, browsers block many features from working for security reasons.)");
 		}
 	})();
-	
-	function size_iframe()
-	{
-		var w = jQuery(window).width() - side_size;
-		var h = jQuery(window).height();
-		jQuery("iframe").width(w).height(h);
-	};
-	
-	jQuery(document).ready(size_iframe);
-	jQuery(window).resize(size_iframe);
-	
-	function OnRegisterSWError(e)
-	{
-		console.warn("Failed to register service worker: ", e);
-	};
-	
-	// Runtime calls this global method when ready to start caching (i.e. after startup).
-	// This registers the service worker which caches resources for offline support.
-	window.C2_RegisterSW = function C2_RegisterSW()
-	{
-		if (!navigator.serviceWorker)
-			return;		// no SW support, ignore call
-		
-		try {
-			navigator.serviceWorker.register("sw.js", { scope: "./" })
-			.then(function (reg)
-			{
-				console.log("Registered service worker on " + reg.scope);
-			})
-			.catch(OnRegisterSWError);
-		}
-		catch (e)
-		{
-			OnRegisterSWError(e);
-		}
-	};
 	</script>
 	
-	<div id="side">
-		<p>Side content goes here. You can add any additional HTML content, e.g. an advert.</p>
+	<!-- The canvas must be inside a div called c2canvasdiv -->
+	<div id="c2canvasdiv">
+	
+		<!-- The canvas the project will render to.  If you change its ID, don't forget to change the
+		ID the runtime looks for in the jQuery events above (ready() and cr_sizeCanvas()). -->
+		<canvas id="c2canvas" width="640" height="448">
+			<!-- This text is displayed if the visitor's browser does not support HTML5.
+			You can change it, but it is a good idea to link to a description of a browser
+			and provide some links to download some popular HTML5-compatible browsers. -->
+			<h1>Your browser does not appear to support HTML5.  Try upgrading your browser to the latest version.  <a href="http://www.whatbrowser.org">What is a browser?</a>
+			<br/><br/><a href="http://www.microsoft.com/windows/internet-explorer/default.aspx">Microsoft Internet Explorer</a><br/>
+			<a href="http://www.mozilla.com/firefox/">Mozilla Firefox</a><br/>
+			<a href="http://www.google.com/chrome/">Google Chrome</a><br/>
+			<a href="http://www.apple.com/safari/download/">Apple Safari</a></h1>
+		</canvas>
+		
 	</div>
-	<div id="main">
-		<iframe allowfullscreen="true" src="game.html" scrolling="no" noresize="noresize" />
-	</div>
+	
+	<!-- Pages load faster with scripts at the bottom -->
+	
+	<!-- Construct 2 exported games require jQuery. -->
+	<script src="jquery-3.4.1.min.js"></script>
+
+
+	
+    <!-- The runtime script.  You can rename it, but don't forget to rename the reference here as well.
+    This file will have been minified and obfuscated if you enabled "Minify script" during export. -->
+	<script src="c2runtime.js"></script>
+
+    <script>
+		// Start the Construct 2 project running on window load.
+		jQuery(document).ready(function ()
+		{			
+			// Create new runtime using the c2canvas
+			cr_createRuntime("c2canvas");
+		});
+		
+		// Pause and resume on page becoming visible/invisible
+		function onVisibilityChanged() {
+			if (document.hidden || document.mozHidden || document.webkitHidden || document.msHidden)
+				cr_setSuspended(true);
+			else
+				cr_setSuspended(false);
+		};
+		
+		document.addEventListener("visibilitychange", onVisibilityChanged, false);
+		document.addEventListener("mozvisibilitychange", onVisibilityChanged, false);
+		document.addEventListener("webkitvisibilitychange", onVisibilityChanged, false);
+		document.addEventListener("msvisibilitychange", onVisibilityChanged, false);
+		
+		function OnRegisterSWError(e)
+		{
+			console.warn("Failed to register service worker: ", e);
+		};
+		
+		// Runtime calls this global method when ready to start caching (i.e. after startup).
+		// This registers the service worker which caches resources for offline support.
+		window.C2_RegisterSW = function C2_RegisterSW()
+		{
+			if (!navigator.serviceWorker)
+				return;		// no SW support, ignore call
+			
+			try {
+				navigator.serviceWorker.register("sw.js", { scope: "./" })
+				.then(function (reg)
+				{
+					console.log("Registered service worker on " + reg.scope);
+				})
+				.catch(OnRegisterSWError);
+			}
+			catch (e)
+			{
+				OnRegisterSWError(e);
+			}
+		};
+    </script>
 </body> 
 </html> 

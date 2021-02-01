@@ -1,7 +1,8 @@
 ﻿{
-	"version": 1604746089,
+	"version": 1612154495,
 	"fileList": [
 		"data.js",
+		"game.html",
 		"c2runtime.js",
 		"jquery-3.4.1.min.js",
 		"offlineClient.js",
